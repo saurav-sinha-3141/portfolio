@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Saurav Sinha's Portfolio",
+  // icons: {
+  //   icon: "/Saurav-new.jpg",
+  // },
   description: "A beautiful, animated portfolio built with Next.js 14",
   keywords: [
     "saurav",

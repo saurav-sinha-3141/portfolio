@@ -165,17 +165,17 @@ export default function Home() {
               {[
                 {
                   Icon: FaLinkedin,
-                  link: "https://www.linkedin.com/in/sinhasaurav",
+                  link: "https://dub.sh/wemw1MD",
                   color: "hover:text-blue-400",
                 },
                 {
                   Icon: FaGithub,
-                  link: "https://github.com/saurav-sinha-3141",
+                  link: "https://dub.sh/aGIRm7H",
                   color: "hover:text-purple-400",
                 },
                 {
                   Icon: BsTwitterX,
-                  link: "https://x.com/ssinha3141",
+                  link: "https://dub.sh/GcsZZDm",
                   color: "hover:text-blue-300",
                 },
                 {
@@ -185,7 +185,7 @@ export default function Home() {
                 },
                 {
                   Icon: MdDocumentScanner,
-                  link: "https://drive.google.com/file/d/1JyPQphnLZGgLFEVGZv8U6uCCrad3CxOi/view?usp=drive_link",
+                  link: "https://dub.sh/O7QIVIq",
                   color: "hover:text-yellow-400",
                 },
               ].map(({ Icon, link, color }, index) => (
