@@ -77,7 +77,7 @@ export default function Home() {
     {
       title: "Next.js Portfolio",
       description: "Modern portfolio with animations and responsive design",
-      link: "sauravsinha.tech",
+      link: "https://www.sauravsinha.tech",
       tech: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
       image:
         "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&q=80",
