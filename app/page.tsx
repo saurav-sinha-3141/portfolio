@@ -33,10 +33,10 @@ export default function Home() {
 
       const result = await response.json();
       console.log("Response from server:", result);
-      alert(result.status);
+      alert(`Status: ${result.status}`);
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Failed to submit form.");
+      alert("Error: Unable to submit form. Please try again.");
     }
   };
 
