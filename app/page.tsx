@@ -8,6 +8,38 @@ import { useDrag } from "react-use-gesture";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
+  const sendFormData = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    const formData = {
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLInputElement).value,
+    };
+
+    console.log("Sending formData:", formData);
+
+    try {
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server responded with ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log("Response from server:", result);
+      alert(result.status);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to submit form.");
+    }
+  };
+
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [ref, inView] = useInView({
@@ -342,10 +374,11 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Get in Touch
           </h2>
-          <form className="max-w-2xl mx-auto space-y-6">
+          <form onSubmit={sendFormData} className="max-w-2xl mx-auto space-y-6">
             <motion.div variants={itemVariants}>
               <input
                 type="email"
+                name="email"
                 placeholder="Your Email"
                 className="w-full p-4 rounded-xl bg-gray-700/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm"
                 required
@@ -355,6 +388,7 @@ export default function Home() {
               <textarea
                 placeholder="Your Message"
                 rows={5}
+                name="message"
                 className="w-full p-4 rounded-xl bg-gray-700/50 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all backdrop-blur-sm"
                 required
               ></textarea>
