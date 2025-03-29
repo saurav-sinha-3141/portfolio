@@ -6,7 +6,7 @@ export async function OPTIONS() {
     {
       status: 204,
       headers: {
-        "Access-Control-Allow-Origin": "https://sauravsinha.tech",
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "POST, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type",
       },
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(data, {
       status: response.ok ? 200 : response.status,
       headers: {
-        "Access-Control-Allow-Origin": "https://sauravsinha.tech",
+        "Access-Control-Allow-Origin": "*",
       },
     });
   } catch (error) {
