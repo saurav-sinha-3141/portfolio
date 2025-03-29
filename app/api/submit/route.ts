@@ -1,5 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 
+export async function OPTIONS() {
+  return NextResponse.json(
+    {},
+    {
+      status: 204,
+      headers: {
+        "Access-Control-Allow-Origin": "https://sauravsinha.tech",
+        "Access-Control-Allow-Methods": "POST, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+    }
+  );
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -23,6 +37,9 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(data, {
       status: response.ok ? 200 : response.status,
+      headers: {
+        "Access-Control-Allow-Origin": "https://sauravsinha.tech",
+      },
     });
   } catch (error) {
     console.error("Server error:", error);
