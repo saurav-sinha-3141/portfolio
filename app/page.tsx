@@ -47,9 +47,9 @@ export default function Home() {
     threshold: 0.1,
   });
 
-  const bind = useDrag(({ offset: [x] }) => {
+  const bind = useDrag(({ delta: [dx] }) => {
     if (carouselRef.current) {
-      carouselRef.current.scrollLeft = -x;
+      carouselRef.current.scrollLeft -= dx;
     }
   });
 
