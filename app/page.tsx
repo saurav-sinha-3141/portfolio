@@ -244,7 +244,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-gray-300">
                 <p className="leading-relaxed">
-                  I'm a passionate developer with a strong foundation in
+                  I am a passionate developer with a strong foundation in
                   software development, system design, and emerging
                   technologies. I enjoy building scalable applications,
                   exploring low-level programming, and optimizing systems for
