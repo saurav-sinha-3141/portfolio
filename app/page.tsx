@@ -1,7 +1,37 @@
 "use client";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaDocker,
+  FaLinux,
+  FaPython,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+} from "react-icons/fa";
+import {
+  SiMongodb,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
+  SiRedis,
+  SiFastapi,
+  SiExpress,
+  SiTensorflow,
+  SiPytorch,
+  SiNginx,
+  SiCplusplus,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { VscAzure } from "react-icons/vsc";
 import { MdDocumentScanner } from "react-icons/md";
 import { BsTwitterX } from "react-icons/bs";
+
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDrag } from "react-use-gesture";
@@ -80,7 +110,7 @@ export default function Home() {
       link: "https://saurav-sinha-3141.github.io/rt-chat",
       tech: ["React", "Node.js", "WebSocket"],
       image:
-        "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=500&q=80",
+        "https://plus.unsplash.com/premium_photo-1719592940136-1915157d096f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Chatllama",
@@ -88,7 +118,7 @@ export default function Home() {
       link: "https://saurav-sinha-3141.github.io/chatllama",
       tech: ["React", "Node.js", "Ollama", "CI/CD", "PWA"],
       image:
-        "https://images.unsplash.com/photo-1738107450290-ec41c2399ad7?w=500&q=80",
+        "https://plus.unsplash.com/premium_photo-1726079247110-5e593660c7b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Video Playback Controller",
@@ -96,15 +126,15 @@ export default function Home() {
       link: "https://github.com/saurav-sinha-3141/video-playback",
       tech: ["Javascript", "HTML"],
       image:
-        "https://images.unsplash.com/photo-1555066931-bf19f8fd1085?w=500&q=80",
+        "https://plus.unsplash.com/premium_photo-1719933739169-43df6d0bad54?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      title: "Media Server Setup",
-      description: "Self-hosted streaming solution with transcoding",
-      link: "https://github.com/saurav-sinha-3141",
-      tech: ["Docker", "Nginx", "FFmpeg", "Redis"],
+      title: "Github Floating Icon",
+      description: "NPM package for linking to a webpage and displaying icon",
+      link: "https://www.npmjs.com/package/github-icon-link",
+      tech: ["Typescript", "DOM Manipulation", "React"],
       image:
-        "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500&q=80",
+        "https://images.unsplash.com/photo-1654277041218-84424c78f0ae?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       title: "Next.js Portfolio",
@@ -112,14 +142,62 @@ export default function Home() {
       link: "https://www.sauravsinha.tech",
       tech: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
       image:
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&q=80",
+        "https://images.unsplash.com/photo-1527239441953-caffd968d952?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Text Utils",
+      description: "Online text formatting platform",
+      link: "https://text-utils.sauravsinha.tech",
+      tech: ["React", "Javascript", "Bootstrap"],
+      image:
+        "https://plus.unsplash.com/premium_photo-1677340725081-e81626d96e29?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Calculator",
+      description: "Calculator website",
+      link: "https://calculator.sauravsinha.tech",
+      tech: ["HTML", "Javascript", "CSS"],
+      image:
+        "https://images.unsplash.com/photo-1636033503567-a59bff19d79a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Rock Paper Scissor",
+      description: "Rock Paper Scissor Website",
+      link: "https://rock-paper-scissor.sauravsinha.tech",
+      tech: ["HTML", "Javascript", "CSS"],
+      image:
+        "https://plus.unsplash.com/premium_photo-1732520911390-4e42b3dc014d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Search Like Portfolio",
+      description: "Portfolio Website",
+      link: "https://saurav-sinha-3141.github.io/search-portfolio/",
+      tech: ["React", "Tailwind"],
+      image:
+        "https://plus.unsplash.com/premium_photo-1684225765486-1f88c1c42b8e?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Prank Calculator",
+      description: "Prank Website",
+      link: "https://saurav-sinha-3141.github.io/simple-calculator/",
+      tech: ["HTML", "Javascript", "CSS"],
+      image:
+        "https://images.unsplash.com/photo-1587813368604-e793305db704?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      title: "Notepad #",
+      description: "Writing scripts in Windows using python",
+      link: "https://github.com/saurav-sinha-3141/notepad-sharp",
+      tech: ["Python", "Tkinter", "Batchfile"],
+      image:
+        "https://images.unsplash.com/photo-1512317049220-d3c6fcaf6681?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen">
       <motion.div
-        className="w-full max-w-[1200px] mx-auto p-6 md:p-10"
+        className="w-full mx-auto p-6 md:p-10"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -191,45 +269,51 @@ export default function Home() {
           >
             {/* Social Icons */}
             <motion.div
-              className="flex justify-center md:justify-start space-x-4"
+              className="grid grid-cols-2 md:grid-cols-5 gap-4 place-items-center"
               variants={containerVariants}
             >
               {[
                 {
+                  sitename: "LinkedIn",
                   Icon: FaLinkedin,
                   link: "https://dub.sh/wemw1MD",
                   color: "hover:text-blue-400",
                 },
                 {
+                  sitename: "GitHub",
                   Icon: FaGithub,
                   link: "https://dub.sh/aGIRm7H",
                   color: "hover:text-purple-400",
                 },
                 {
+                  sitename: "Twitter",
                   Icon: BsTwitterX,
                   link: "https://dub.sh/GcsZZDm",
                   color: "hover:text-blue-300",
                 },
                 {
+                  sitename: "Email",
                   Icon: FaEnvelope,
                   link: "mailto:sauravsinha3141@gmail.com",
                   color: "hover:text-green-400",
                 },
                 {
+                  sitename: "Resume",
                   Icon: MdDocumentScanner,
                   link: "https://dub.sh/O7QIVIq",
                   color: "hover:text-yellow-400",
                 },
-              ].map(({ Icon, link, color }, index) => (
+              ].map(({ Icon, link, color, sitename }, index) => (
                 <motion.a
                   key={index}
                   href={link}
                   target="_blank"
-                  className={`bg-gray-800/50 p-4 rounded-xl shadow-lg backdrop-blur-sm border border-gray-700/50 ${color} transform transition-all duration-300`}
+                  className={`flex items-center justify-center w-[140px] bg-gray-800/50 p-4 rounded-xl shadow-lg backdrop-blur-sm border border-gray-700/50 ${color} transform transition-all duration-300`}
                   whileHover={{ scale: 1.1, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Icon size={24} />
+                  <span className="text-sm font-medium ml-2">{sitename}</span>
                 </motion.a>
               ))}
             </motion.div>
@@ -257,6 +341,96 @@ export default function Home() {
                   logic, user experiences, or networking protocols, I strive for
                   well-engineered, impactful solutions.
                 </p>
+              </div>
+            </motion.div>
+
+            {/* Tech Stack Section */}
+            <motion.div
+              className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-gray-700/50"
+              variants={itemVariants}
+            >
+              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
+                Tech Stack
+              </h2>
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-6 text-gray-300">
+                {[
+                  // Frontend
+                  { name: "HTML", icon: FaHtml5, color: "text-orange-500" },
+                  { name: "CSS", icon: FaCss3Alt, color: "text-blue-400" },
+                  { name: "JavaScript", icon: FaJs, color: "text-yellow-400" },
+                  {
+                    name: "TypeScript",
+                    icon: SiTypescript,
+                    color: "text-blue-500",
+                  },
+                  { name: "React", icon: FaReact, color: "text-blue-300" },
+                  {
+                    name: "Next.js",
+                    icon: TbBrandNextjs,
+                    color: "text-gray-300",
+                  },
+                  {
+                    name: "Tailwind CSS",
+                    icon: SiTailwindcss,
+                    color: "text-cyan-400",
+                  },
+                  {
+                    name: "Bootstrap",
+                    icon: FaBootstrap,
+                    color: "text-purple-500",
+                  },
+
+                  // Backend
+                  { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+                  {
+                    name: "Express.js",
+                    icon: SiExpress,
+                    color: "text-gray-300",
+                  },
+                  { name: "FastAPI", icon: SiFastapi, color: "text-green-400" },
+
+                  // Databases
+                  { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
+                  {
+                    name: "PostgreSQL",
+                    icon: SiPostgresql,
+                    color: "text-blue-500",
+                  },
+                  { name: "Redis", icon: SiRedis, color: "text-red-500" },
+
+                  // DevOps & Cloud
+                  { name: "Docker", icon: FaDocker, color: "text-blue-400" },
+                  { name: "Git", icon: FaGitAlt, color: "text-orange-500" },
+                  { name: "GitHub", icon: FaGithub, color: "text-gray-400" },
+                  { name: "Linux", icon: FaLinux, color: "text-gray-300" },
+                  {
+                    name: "Azure",
+                    icon: VscAzure,
+                    color: "text-blue-500",
+                  },
+                  { name: "NGINX", icon: SiNginx, color: "text-green-500" },
+
+                  // AI/ML & Misc
+                  { name: "Python", icon: FaPython, color: "text-yellow-300" },
+                  {
+                    name: "TensorFlow",
+                    icon: SiTensorflow,
+                    color: "text-orange-400",
+                  },
+                  { name: "PyTorch", icon: SiPytorch, color: "text-red-400" },
+                  { name: "C++", icon: SiCplusplus, color: "text-blue-400" },
+                ].map(({ name, icon: Icon, color }, index) => (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center space-y-2"
+                  >
+                    <Icon
+                      size={40}
+                      className={`${color} transition transform hover:scale-110`}
+                    />
+                    <span className="text-sm font-medium">{name}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
