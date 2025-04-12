@@ -34,6 +34,10 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/icons/icon.png" />
+        <meta
+          name="google-site-verification"
+          content="50AEcrP71ObP6EgNg4B-YHpsa2PNidVNtRm-VPoVSME"
+        />
       </head>
       <body className={inter.className}>{children}</body>
       <Analytics />
